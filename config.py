@@ -297,7 +297,7 @@ else:
 EXTENSIONS = EXTENSIONS.replace("template", "")
 # Now cleanup any multiple, leading or trailing spaces
 # Those throw off the make foreach looping
-EXTENSIONS = re.sub("\s+", " ", EXTENSIONS) # Multiple spaces into 1
+EXTENSIONS = re.sub(r"\s+", " ", EXTENSIONS)
 EXTENSIONS = EXTENSIONS.strip() # Remove leading/trailing whitespace
 # Take our random order string and create a sorted string
 buildvars["EXTENSIONS"] = ' ' . join(sorted(EXTENSIONS.split(" ")))
